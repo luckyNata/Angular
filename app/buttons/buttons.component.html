@@ -1,0 +1,5 @@
+<div class="clearfix buttons" [ngClass]="{'hidden':hideFlag}">
+    <a class="person" [routerLink]="['about']" (click)="hideThreeButtons()">about</a>
+    <a class="info" [routerLink]="['knowledge']" (click)="hideThreeButtons()">knowledge</a>
+    <a class="tasks" [routerLink]="['experience']" (click)="hideThreeButtons()">experience</a>
+</div>

@@ -1,0 +1,19 @@
+
+.list li {
+    width: 95%;
+    margin: 0 auto;
+}
+.list span{
+    width: 500px;
+    display: inline-block;
+}
+.list i {
+    width: 25px;
+    display: inline-block;
+}
+.colored {
+    color: red;
+}
+.checked {
+    text-decoration: line-through;
+}

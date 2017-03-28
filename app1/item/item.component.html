@@ -1,0 +1,5 @@
+<li class="list-item">
+    <i class="fa" aria-hidden="true" [ngClass]=" todo.status ? {'fa-check-square-o':true, 'colored': true} : {'fa-square-o': true}"></i>
+    <span [class.checked]="todo.status" (click)="onToggle()">{{ todo.title }}</span>
+    <i class="fa fa-trash-o" aria-hidden="true" (click) = "onDelete()"></i>
+</li>

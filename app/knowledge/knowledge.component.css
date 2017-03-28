@@ -1,0 +1,16 @@
+knowledge{
+    display: block;
+    clear: left;
+}
+.info_block {
+    font: 20px Arial, sans-serif;
+    color: azure;
+}
+ul {
+    list-style: none;
+    font: 14px Arial, sans-serif;
+}
+.item {
+    margin-left: 10px;
+    margin-bottom: 10px;
+}

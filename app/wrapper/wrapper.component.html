@@ -1,0 +1,8 @@
+<div class = "wrapper" (back)="console.log('backkkkk')">
+    <div class="container clearfix" >
+        <main-title [flag]="flag" (onChange)="changeColor()" [myDynamicColor]="color"></main-title>
+        <buttons [hideFlag]="hideFlag" ></buttons>
+        <router-outlet></router-outlet>
+        <plans></plans>
+    </div>
+</div>
