@@ -21,6 +21,24 @@ a:hover {
     box-sizing: border-box;
     padding: 30px 20px 0 10px;
 }
+.my_photo {
+    width: 30%;
+    text-align: center;
+    float: left;
+}
+.my_photo img{
+    width: 300px;
+}
+.links {
+    width: 70%;
+    float: left;
+}
+.round_wr {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 300px;
+    height: 300px;
+}
 .clearfix:after {
     display: block;
     content: '';

@@ -1,0 +1,10 @@
+.fb, .in {
+    display: inline-block;
+
+}
+.icons{
+   text-align: right;
+}
+.icons img {
+    height: 40px;
+}

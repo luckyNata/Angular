@@ -45,6 +45,6 @@ export class MainService {
         // return this.hiddenThreeButtons;
     }
     getFlag(){
-        return new Observable(this.hiddenThreeButtons);
+        return this.hiddenThreeButtons;
     }
 }

@@ -15,7 +15,6 @@ var router_1 = require('@angular/router');
 require('rxjs/add/operator/map');
 require('rxjs/add/operator/catch');
 require('rxjs/add/observable/throw');
-var rxjs_1 = require("rxjs");
 var MainService = (function () {
     function MainService(http, router) {
         this.http = http;
@@ -49,7 +48,7 @@ var MainService = (function () {
         // return this.hiddenThreeButtons;
     };
     MainService.prototype.getFlag = function () {
-        return new rxjs_1.Observable(this.hiddenThreeButtons);
+        return this.hiddenThreeButtons;
     };
     MainService = __decorate([
         core_1.Injectable(), 

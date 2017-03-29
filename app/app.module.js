@@ -26,6 +26,7 @@ var router_1 = require('@angular/router');
 var app_routing_1 = require('./app.routing');
 var person_qualities_component_1 = require("./person/person.qualities.component");
 var person_graduation_component_1 = require("./person/person.graduation.component");
+var social_component_1 = require("./social/social.component");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -34,7 +35,7 @@ var AppModule = (function () {
             imports: [platform_browser_1.BrowserModule, http_1.HttpModule, angular_in_memory_web_api_1.InMemoryWebApiModule.forRoot(data_service_1.InMemoryDb), router_1.RouterModule, app_routing_1.routing],
             declarations: [app_component_1.AppComponent, title_component_1.TitleComponent, person_component_1.PersonComponent, knowledge_component_1.KnowledgeComponent, buttons_component_1.ButtonsComponent,
                 experience_component_1.ExperienceComponent, wrapper_component_1.WrapperComponent, person_qualities_component_1.PersonQualitiesComponent, person_graduation_component_1.PersonGraguationComponent,
-                todo_list_component_1.TodoListComponent
+                todo_list_component_1.TodoListComponent, social_component_1.SocialComponent
             ],
             providers: [main_service_1.MainService],
             bootstrap: [app_component_1.AppComponent]

@@ -16,13 +16,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { routing } from './app.routing';
 import {PersonQualitiesComponent} from "./person/person.qualities.component";
 import {PersonGraguationComponent} from "./person/person.graduation.component";
+import {SocialComponent} from "./social/social.component";
 
 
 @NgModule({
     imports:      [BrowserModule, HttpModule, InMemoryWebApiModule.forRoot(InMemoryDb), RouterModule, routing],
     declarations: [AppComponent, TitleComponent, PersonComponent, KnowledgeComponent, ButtonsComponent,
         ExperienceComponent, WrapperComponent, PersonQualitiesComponent, PersonGraguationComponent,
-        TodoListComponent
+        TodoListComponent, SocialComponent
         ],
     providers:    [MainService],
     bootstrap:    [AppComponent]
