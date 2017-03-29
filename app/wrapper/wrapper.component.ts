@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {OnInit} from '@angular/core';
 import {MainService} from '../shared/main.service';
 import {DataType} from "../shared/dataType";
+import {Router} from '@angular/router';
 
 @Component({
     moduleId: module.id,
@@ -16,8 +16,9 @@ export class WrapperComponent implements OnInit{
     color: any;
     hideFlag: Boolean;
 
-    constructor(private mainService: MainService){}
+    constructor(private mainService: MainService,  private router: Router){}
     ngOnInit(){
+        this.router.navigate(['']);
         this.changeColor();
         setInterval(() => {
             this.changeColor();
@@ -31,8 +32,14 @@ export class WrapperComponent implements OnInit{
                 console.log('data1', mas)
             });
 
-        this.hideFlag = this.mainService.getFlag();
-        console.log('onInit', this.hideFlag);
+
+        this.mainService.btnHidden.subscribe(
+            data => {this.hideFlag = data;
+                console.log('onInit', this.hideFlag);
+            }
+        )
+
+
     }
 
     changeColor(){

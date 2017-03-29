@@ -8,7 +8,11 @@ var InMemoryDb = (function () {
             title: 'Wellcome to my DB',
             name: 'Nataliia',
             surname: 'Kravets',
-            knowledge: ['html', 'Css', 'js', 'Angular2']
+            knowledge: ['html', 'Css', 'js', 'Angular2'],
+            experience: ['http://blauberg-group.com',
+                'http://blaubergventilatoren.de/',
+                'site3',
+                'Angular2']
         };
         return { data1: data1 };
     };

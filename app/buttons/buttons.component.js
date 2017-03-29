@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var main_service_1 = require("../shared/main.service");
 var ButtonsComponent = (function () {
+    // hideFlag: Boolean;
     function ButtonsComponent(mainService) {
         this.mainService = mainService;
     }
@@ -18,12 +19,13 @@ var ButtonsComponent = (function () {
     //     this.mainService.hideThreeButtons();
     // }
     ButtonsComponent.prototype.ngOnInit = function () {
-        this.hideFlag = this.mainService.getFlag();
+        // this.hideFlag =  this.mainService.getFlag();
     };
     ButtonsComponent.prototype.hideThreeButtons = function () {
-        this.mainService.hideThreeButtons();
-        this.hideFlag = this.mainService.getFlag();
-        console.log('hideFlag', this.hideFlag);
+        // this.mainService.hideThreeButtons();
+        this.mainService.changeBtn(true);
+        // this.hideFlag =  this.mainService.getFlag();
+        // console.log('hideFlag', this.hideFlag);
     };
     __decorate([
         core_1.Input(), 

@@ -9,7 +9,7 @@ import {DataType} from "../shared/dataType";
     moduleId: module.id,
     selector: 'knowledge',
     templateUrl: 'knowledge.component.html',
-    styleUrls: ['knowledge.component.css']
+    styleUrls: ['../shared/general.css', 'knowledge.component.css']
 })
 
 @Injectable()
@@ -27,8 +27,8 @@ export class KnowledgeComponent implements OnInit{
         })
     }
     goHome(){
-        this.mainService.showThreeButtons();
-        console.log(this.mainService.getFlag());
+        this.mainService.changeBtn(false);
+        // console.log(this.mainService.getFlag());
         this.router.navigate(['']);
     }
 }

@@ -9,16 +9,32 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var main_service_1 = require("../shared/main.service");
+var router_1 = require('@angular/router');
 var ExperienceComponent = (function () {
-    function ExperienceComponent() {
+    function ExperienceComponent(mainService, router) {
+        this.mainService = mainService;
+        this.router = router;
     }
+    ExperienceComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.mainService.getData().subscribe(function (mas) {
+            _this.experience = mas.experience;
+        });
+    };
+    ExperienceComponent.prototype.goHome = function () {
+        this.mainService.changeBtn(false);
+        // console.log(this.mainService.getFlag());
+        this.router.navigate(['']);
+    };
     ExperienceComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
             selector: 'tasks',
-            templateUrl: 'experience.component.html'
+            templateUrl: 'experience.component.html',
+            styleUrls: ['../shared/general.css', 'experience.component.css']
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [main_service_1.MainService, router_1.Router])
     ], ExperienceComponent);
     return ExperienceComponent;
 }());

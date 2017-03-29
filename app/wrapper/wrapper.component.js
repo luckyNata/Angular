@@ -10,12 +10,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var main_service_1 = require('../shared/main.service');
+var router_1 = require('@angular/router');
 var WrapperComponent = (function () {
-    function WrapperComponent(mainService) {
+    function WrapperComponent(mainService, router) {
         this.mainService = mainService;
+        this.router = router;
     }
     WrapperComponent.prototype.ngOnInit = function () {
         var _this = this;
+        this.router.navigate(['']);
         this.changeColor();
         setInterval(function () {
             _this.changeColor();
@@ -26,8 +29,10 @@ var WrapperComponent = (function () {
             _this.flag = _this.data1.flag;
             console.log('data1', mas);
         });
-        this.hideFlag = this.mainService.getFlag();
-        console.log('onInit', this.hideFlag);
+        this.mainService.btnHidden.subscribe(function (data) {
+            _this.hideFlag = data;
+            console.log('onInit', _this.hideFlag);
+        });
     };
     WrapperComponent.prototype.changeColor = function () {
         this.color = this.mainService.changeColor();
@@ -39,7 +44,7 @@ var WrapperComponent = (function () {
             templateUrl: 'wrapper.component.html',
             styleUrls: ['wrapper.component.css']
         }), 
-        __metadata('design:paramtypes', [main_service_1.MainService])
+        __metadata('design:paramtypes', [main_service_1.MainService, router_1.Router])
     ], WrapperComponent);
     return WrapperComponent;
 }());

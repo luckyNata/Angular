@@ -1,12 +1,12 @@
 .title {
     position: absolute;
     top: 0;
-    left: 100%;
+    right: 100%;
     font-size: 20px;
     color: forestgreen;
 }
 .visible {
     color: red;
-    left: 100px;
-    transition: left 1s;
+    right: 0;
+    transition: right 1s;
 }

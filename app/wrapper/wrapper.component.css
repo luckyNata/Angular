@@ -14,15 +14,9 @@
     content: '';
     clear: both;
 }
-.main {
-    min-height: 100%;
-    margin-bottom: -100px;
-}
-.buffer {
-    height: 100px;
-}
-footer {
-    height: 100px;
+header {
+    position: relative;
+    overflow: hidden;
 }
 main-title {
     width: 100%;
@@ -37,3 +31,14 @@ knowledge{
     border: 1px solid red;
     clear: left;
 }
+.main {
+    min-height: 100%;
+    margin-bottom: -100px;
+}
+.buffer {
+    height: 100px;
+}
+footer {
+    height: 100px;
+}
+

@@ -19,7 +19,7 @@ var MainService = (function () {
     function MainService(http, router) {
         this.http = http;
         this.router = router;
-        this.hiddenThreeButtons = false;
+        this.btnHidden = new core_1.EventEmitter();
     }
     MainService.prototype.getData = function () {
         return this.http.get('api/data1')
@@ -38,17 +38,8 @@ var MainService = (function () {
     MainService.prototype.catchError = function (error) {
         console.error(error.message || error);
     };
-    MainService.prototype.showThreeButtons = function () {
-        this.hiddenThreeButtons = false;
-        console.log('show in Service', this.hiddenThreeButtons);
-    };
-    MainService.prototype.hideThreeButtons = function () {
-        this.hiddenThreeButtons = true;
-        console.log('hide in Service', this.hiddenThreeButtons);
-        // return this.hiddenThreeButtons;
-    };
-    MainService.prototype.getFlag = function () {
-        return this.hiddenThreeButtons;
+    MainService.prototype.changeBtn = function (value) {
+        this.btnHidden.emit(value);
     };
     MainService = __decorate([
         core_1.Injectable(), 

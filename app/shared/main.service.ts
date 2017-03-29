@@ -1,6 +1,6 @@
 
 import {Http} from '@angular/http';
-import {Injectable} from '@angular/core';
+import {Injectable, EventEmitter} from '@angular/core';
 import 'rxjs/add/operator/toPromise';
 import {DataType} from "./dataType";
 import {Router} from '@angular/router';
@@ -11,7 +11,8 @@ import {Observable} from "rxjs";
 
 @Injectable()
 export class MainService {
-    hiddenThreeButtons: Boolean = false;
+    btnHidden = new EventEmitter<boolean>();
+
     constructor(private http: Http, private router: Router){}
 
     getData() : Observable {
@@ -31,20 +32,11 @@ export class MainService {
     }
 
     catchError(error: any){
-        console.error(error.message|| error);
+        console.error(error.message || error);
     }
-    showThreeButtons(){
 
-        this.hiddenThreeButtons = false;
-        console.log('show in Service', this.hiddenThreeButtons);
+    changeBtn(value: boolean){
+        this.btnHidden.emit(value);
     }
-    hideThreeButtons(){
 
-        this.hiddenThreeButtons = true;
-        console.log('hide in Service', this.hiddenThreeButtons);
-        // return this.hiddenThreeButtons;
-    }
-    getFlag(){
-        return this.hiddenThreeButtons;
-    }
 }

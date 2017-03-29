@@ -26,8 +26,8 @@ var KnowledgeComponent = (function () {
         });
     };
     KnowledgeComponent.prototype.goHome = function () {
-        this.mainService.showThreeButtons();
-        console.log(this.mainService.getFlag());
+        this.mainService.changeBtn(false);
+        // console.log(this.mainService.getFlag());
         this.router.navigate(['']);
     };
     KnowledgeComponent = __decorate([
@@ -35,7 +35,7 @@ var KnowledgeComponent = (function () {
             moduleId: module.id,
             selector: 'knowledge',
             templateUrl: 'knowledge.component.html',
-            styleUrls: ['knowledge.component.css']
+            styleUrls: ['../shared/general.css', 'knowledge.component.css']
         }),
         core_1.Injectable(), 
         __metadata('design:paramtypes', [main_service_1.MainService, router_1.Router])
